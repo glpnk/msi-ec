@@ -65,7 +65,7 @@ static const char *ALLOWED_FW_0[] __initconst = {
 };
 
 static struct msi_ec_conf CONF0 __initdata = {
-	.allowed_fw = ALLOWED_FW_0,
+	.allowed_fw = ALLOWED_FW_0, // WMI1 based
 	.charge_control = {
 		.address      = 0xef,
 		.offset_start = 0x8a,
@@ -137,7 +137,7 @@ static struct msi_ec_conf CONF0 __initdata = {
 };
 
 static const char *ALLOWED_FW_1[] __initconst = {
-	"17F2EMS1.103", // GF75 Thin 11UC
+	"17F2EMS1.103", // GF75 Thin 9SC
 	"17F2EMS1.104",
 	"17F2EMS1.106",
 	"17F2EMS1.107",
@@ -145,7 +145,7 @@ static const char *ALLOWED_FW_1[] __initconst = {
 };
 
 static struct msi_ec_conf CONF1 __initdata = {
-	.allowed_fw = ALLOWED_FW_1,
+	.allowed_fw = ALLOWED_FW_1, // WMI1 based
 	.charge_control = {
 		.address      = 0xef,
 		.offset_start = 0x8a,
@@ -217,12 +217,12 @@ static struct msi_ec_conf CONF1 __initdata = {
 };
 
 static const char *ALLOWED_FW_2[] __initconst = {
-	"1552EMS1.118",
+	"1552EMS1.118", // Modern 15 A11M
 	NULL
 };
 
 static struct msi_ec_conf CONF2 __initdata = {
-	.allowed_fw = ALLOWED_FW_2,
+	.allowed_fw = ALLOWED_FW_2, // WMI2 based
 	.charge_control = {
 		.address      = 0xd7,
 		.offset_start = 0x8a,
@@ -295,12 +295,12 @@ static struct msi_ec_conf CONF2 __initdata = {
 };
 
 static const char *ALLOWED_FW_3[] __initconst = {
-	"1592EMS1.111",
+	"1592EMS1.111", // Summit E16 Flip A12UCT / A12MT
 	NULL
 };
 
 static struct msi_ec_conf CONF3 __initdata = {
-	.allowed_fw = ALLOWED_FW_3,
+	.allowed_fw = ALLOWED_FW_3, // WMI2 based
 	.charge_control = {
 		.address      = 0xd7,
 		.offset_start = 0x8a,
@@ -373,12 +373,12 @@ static struct msi_ec_conf CONF3 __initdata = {
 };
 
 static const char *ALLOWED_FW_4[] __initconst = {
-	"16V4EMS1.114",
+	"16V4EMS1.114", // GS66 Stealth 11UE
 	NULL
 };
 
 static struct msi_ec_conf CONF4 __initdata = {
-	.allowed_fw = ALLOWED_FW_4,
+	.allowed_fw = ALLOWED_FW_4, // WMI2 based
 	.charge_control = {
 		.address      = 0xd7,
 		.offset_start = 0x8a,
@@ -450,14 +450,14 @@ static struct msi_ec_conf CONF4 __initdata = {
 };
 
 static const char *ALLOWED_FW_5[] __initconst = {
-	"158LEMS1.103",
+	"158LEMS1.103", // Alpha 15 B5EE / B5EEK
 	"158LEMS1.105",
 	"158LEMS1.106",
 	NULL
 };
 
 static struct msi_ec_conf CONF5 __initdata = {
-	.allowed_fw = ALLOWED_FW_5,
+	.allowed_fw = ALLOWED_FW_5, // WMI1 based
 	.charge_control = {
 		.address      = 0xef,
 		.offset_start = 0x8a,
@@ -535,7 +535,7 @@ static const char *ALLOWED_FW_6[] __initconst = {
 };
 
 static struct msi_ec_conf CONF6 __initdata = {
-	.allowed_fw = ALLOWED_FW_6,
+	.allowed_fw = ALLOWED_FW_6, // WMI1 based
 	.charge_control = {
 		.address      = 0xef,
 		.offset_start = 0x8a,
@@ -608,14 +608,14 @@ static struct msi_ec_conf CONF6 __initdata = {
 };
 
 static const char *ALLOWED_FW_7[] __initconst = {
-	"17FKEMS1.108",
+	"17FKEMS1.108", // Bravo 17 A4DDR / A4DDK
 	"17FKEMS1.109",
 	"17FKEMS1.10A",
 	NULL
 };
 
 static struct msi_ec_conf CONF7 __initdata = {
-	.allowed_fw = ALLOWED_FW_7,
+	.allowed_fw = ALLOWED_FW_7, // WMI1 based
 	.charge_control = {
 		.address      = 0xef,
 		.offset_start = 0x8a,
@@ -688,7 +688,7 @@ static struct msi_ec_conf CONF7 __initdata = {
 };
 
 static const char *ALLOWED_FW_8[] __initconst = {
-	"14F1EMS1.114", // summit e14 evo a12m
+	"14F1EMS1.114", // Summit E14 Evo A12M
 	"14F1EMS1.115",
 	"14F1EMS1.116",
 	"14F1EMS1.117",
@@ -697,7 +697,7 @@ static const char *ALLOWED_FW_8[] __initconst = {
 };
 
 static struct msi_ec_conf CONF8 __initdata = {
-	.allowed_fw = ALLOWED_FW_8,
+	.allowed_fw = ALLOWED_FW_8, // WMI2 based
 	.charge_control = {
 		.address      = 0xd7,
 		.offset_start = 0x8a,
@@ -774,7 +774,7 @@ static const char *ALLOWED_FW_9[] __initconst = {
 };
 
 static struct msi_ec_conf CONF9 __initdata = {
-	.allowed_fw = ALLOWED_FW_9,
+	.allowed_fw = ALLOWED_FW_9, // WMI1 based
 	.charge_control = {
 		.address      = 0xef,
 		.offset_start = 0x8a,
@@ -846,12 +846,12 @@ static struct msi_ec_conf CONF9 __initdata = {
 };
 
 static const char *ALLOWED_FW_10[] __initconst = {
-	"1582EMS1.107", // GF66 11UC
+	"1582EMS1.107", // Katana GF66 11UC / 11UD
 	NULL
 };
 
 static struct msi_ec_conf CONF10 __initdata = {
-	.allowed_fw = ALLOWED_FW_10,
+	.allowed_fw = ALLOWED_FW_10, // WMI2 based
 	.charge_control = {
 		.address      = 0xd7,
 		.offset_start = 0x8a,
@@ -923,78 +923,78 @@ static struct msi_ec_conf CONF10 __initdata = {
 	},
 };
 
-static const char *ALLOWED_FW_11[] __initconst = { 
-    "16S6EMS1.111", // Prestige 15 a11scx
-    "1552EMS1.115", // Modern 15 a11m
+static const char *ALLOWED_FW_11[] __initconst = {
+	"16S6EMS1.111", // Prestige 15 A11SCX
+	"1552EMS1.115", // Modern 15 A11M TODO: fix conflict with 2
 	NULL 
 };
 
 static struct msi_ec_conf CONF11 __initdata = {
-	.allowed_fw = ALLOWED_FW_11,
-    .charge_control = {
-        .address = 0xD7,
-        .offset_start = 0x8a,
-        .offset_end   = 0x80,
-        .range_min    = 0x8a,
-        .range_max    = 0xe4,
-    },
-    .webcam = {
-        .address       = 0x2e,
-        .block_address = MSI_EC_ADDR_UNKNOWN,
-        .bit           = 1,
-    },
-    .fn_win_swap = {
-        .address = 0xe8,
-        .bit     = 4,
-    },
-    .cooler_boost = {
-        .address = 0x98,
-        .bit     = 7,
-    },
-    .shift_mode = {
-        .address = 0xd2,
-        .modes = {
-            { SM_ECO_NAME,     0xc2 },
-            { SM_COMFORT_NAME, 0xc1 },
-            { SM_SPORT_NAME,   0xc0 },
-            MSI_EC_MODE_NULL
-        },
-    },
-    .super_battery = {
-        .address = 0xeb,
-        .mask = 0x0f,
-    },
-    .fan_mode = {
-        .address = 0xd4,
-        .modes = {
-            { FM_AUTO_NAME,     0x0d },
-            { FM_SILENT_NAME,   0x1d },
-            { FM_ADVANCED_NAME, 0x4d },
-            MSI_EC_MODE_NULL
-        },
-    },
-    .cpu = {
-        .rt_temp_address       = 0x68,
+	.allowed_fw = ALLOWED_FW_11, // WMI2 based
+	.charge_control = {
+		.address      = 0xD7,
+		.offset_start = 0x8a,
+		.offset_end   = 0x80,
+		.range_min    = 0x8a,
+		.range_max    = 0xe4,
+	},
+	.webcam = {
+		.address       = 0x2e,
+		.block_address = MSI_EC_ADDR_UNKNOWN,
+		.bit           = 1,
+	},
+	.fn_win_swap = {
+		.address = 0xe8,
+		.bit     = 4,
+	},
+	.cooler_boost = {
+		.address = 0x98,
+		.bit     = 7,
+	},
+	.shift_mode = {
+		.address = 0xd2,
+		.modes = {
+			{ SM_ECO_NAME,     0xc2 },
+			{ SM_COMFORT_NAME, 0xc1 },
+			{ SM_SPORT_NAME,   0xc0 },
+			MSI_EC_MODE_NULL
+		},
+	},
+	.super_battery = {
+		.address = 0xeb,
+		.mask = 0x0f,
+	},
+	.fan_mode = {
+		.address = 0xd4,
+		.modes = {
+			{ FM_AUTO_NAME,     0x0d },
+			{ FM_SILENT_NAME,   0x1d },
+			{ FM_ADVANCED_NAME, 0x4d },
+			MSI_EC_MODE_NULL
+		},
+	},
+	.cpu = {
+		.rt_temp_address       = 0x68,
 		.rt_fan_speed_address  = MSI_EC_ADDR_UNSUPP,
-        .bs_fan_speed_address  = MSI_EC_ADDR_UNSUPP,
-    },
-    .gpu = {
+		.bs_fan_speed_address  = MSI_EC_ADDR_UNSUPP,
+	},
+	.gpu = {
 		.rt_temp_address      = MSI_EC_ADDR_UNSUPP,
 		.rt_fan_speed_address = MSI_EC_ADDR_UNSUPP,
-    },
-    .leds = {
-        .micmute_led_address = 0x2c,
-        .mute_led_address    = 0x2d,
-        .bit                 = 1,
-    },
-    .kbd_bl = {
-        .bl_mode_address  = MSI_EC_ADDR_UNKNOWN,
-        .bl_modes         = {},
-        .max_mode         = 1,
-        .bl_state_address = 0xd3,
-        .state_base_value = 0x80,
-        .max_state        = 3,
-    },
+	},
+	.leds = {
+		.micmute_led_address = 0x2c,
+		.mute_led_address    = 0x2d,
+		.bit                 = 1,
+	},
+	.kbd_bl = {
+		.bl_mode_address  = MSI_EC_ADDR_UNKNOWN,
+		.bl_modes         = {},
+		.max_mode         = 1,
+		.bl_state_address = 0xd3,
+		.state_base_value = 0x80,
+		.max_state        = 3,
+	},
 };
 
 static const char *ALLOWED_FW_12[] __initconst = {
@@ -1005,7 +1005,7 @@ static const char *ALLOWED_FW_12[] __initconst = {
 };
 
 static struct msi_ec_conf CONF12 __initdata = {
-	.allowed_fw = ALLOWED_FW_12,
+	.allowed_fw = ALLOWED_FW_12, // WMI2 based
 	.charge_control = {
 		.address      = 0xd7,
 		.offset_start = 0x8a,
@@ -1078,12 +1078,12 @@ static struct msi_ec_conf CONF12 __initdata = {
 };
 
 static const char *ALLOWED_FW_13[] __initconst = {
-	"1594EMS1.109", // MSI Prestige 16 Studio A13VE
+	"1594EMS1.109", // Prestige 16 Studio A13VE
 	NULL
 };
 
 static struct msi_ec_conf CONF13 __initdata = {
-	.allowed_fw = ALLOWED_FW_13,
+	.allowed_fw = ALLOWED_FW_13, // WMI2 based
 	.charge_control = {
 		.address      = 0xd7,
 		.offset_start = 0x8a,
@@ -1155,12 +1155,12 @@ static struct msi_ec_conf CONF13 __initdata = {
 };
 
 static const char *ALLOWED_FW_14[] __initconst = {
-	"17L2EMS1.108", // Katana 17 B11UCX-897X
+	"17L2EMS1.108", // Katana 17 B11UCX
 	NULL
 };
 
 static struct msi_ec_conf CONF14 __initdata = {
-	.allowed_fw = ALLOWED_FW_14,
+	.allowed_fw = ALLOWED_FW_14, // WMI2 based
 	.charge_control = {
 		.address      = 0xd7,
 		.offset_start = 0x8a,
@@ -1244,12 +1244,12 @@ static struct msi_ec_conf CONF14 __initdata = {
 };
 
 static const char *ALLOWED_FW_15[] __initconst = {
-	"15CKEMS1.108", // MSI Delta 15 A5EFK
+	"15CKEMS1.108", // Delta 15 A5EFK
 	NULL
 };
 
 static struct msi_ec_conf CONF15 __initdata = {
-	.allowed_fw = ALLOWED_FW_15,
+	.allowed_fw = ALLOWED_FW_15, // WMI1 based
 	.charge_control = {
 		.address      = 0xef,
 		.offset_start = 0x8a, 
@@ -1320,15 +1320,14 @@ static struct msi_ec_conf CONF15 __initdata = {
 	},
 };
 
-/* MSI Modern 15 A5M */
 static const char *ALLOWED_FW_16[] __initconst = {
-	"155LEMS1.105",
+	"155LEMS1.105", // Modern 15 A5M
 	"155LEMS1.106",
 	NULL
 };
 
 static struct msi_ec_conf CONF16 __initdata = {
-	.allowed_fw = ALLOWED_FW_16,
+	.allowed_fw = ALLOWED_FW_16, // WMI1 based
 	.charge_control = {
 		.address      = 0xef,
 		.offset_start = 0x8a,
@@ -1400,12 +1399,12 @@ static struct msi_ec_conf CONF16 __initdata = {
 };
 
 static const char *ALLOWED_FW_17[] __initconst = {
-	"15K1IMS1.110", // MSI CYBORG 15 A12VF
+	"15K1IMS1.110", // Cyborg 15 A12VF
 	NULL
 };
 
 static struct msi_ec_conf CONF17 __initdata = {
-	.allowed_fw = ALLOWED_FW_17,
+	.allowed_fw = ALLOWED_FW_17, // WMI2 based
 	.charge_control = {
 		.address      = 0xd7,
 		.offset_start = 0x8a,
@@ -1487,7 +1486,7 @@ static const char *ALLOWED_FW_18[] __initconst = {
 };
 
 static struct msi_ec_conf CONF18 __initdata = {
-	.allowed_fw = ALLOWED_FW_18,
+	.allowed_fw = ALLOWED_FW_18, // WMI1 based
 	.charge_control = {
 		.address      = 0xef,
 		.offset_start = 0x8a,
@@ -1559,12 +1558,12 @@ static struct msi_ec_conf CONF18 __initdata = {
 };
 
 static const char *ALLOWED_FW_19[] __initconst = { 
-	"1543EMS1.113", // gp66-11ug
+	"1543EMS1.113", // GP66 Leopard 11UG / 11U*
 	NULL 
 };
 
 static struct msi_ec_conf CONF19 __initdata = {
-	.allowed_fw = ALLOWED_FW_19,
+	.allowed_fw = ALLOWED_FW_19, // WMI2 based
 	.charge_control = {
 		.address      = 0xd7,
 		.offset_start = 0x8a,
