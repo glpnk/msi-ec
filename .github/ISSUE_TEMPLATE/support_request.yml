@@ -20,11 +20,19 @@ body:
     validations:
       required: true
 
+  - type: markdown
+    attributes:
+      value: >
+        Get your current EC firmware version:
+        + On Windows: from the msi app on windows
+        + On Linux: load the driver in the debug mode and run `cat /sys/devices/platform/msi-ec/debug/fw_version`
+        + On BIOS info page
+
   - type: input
     id: ec-firmware
     attributes:
       label: EC firmware version
-      description: Get your current EC firmware version from the msi app on windows or the info page in the bios
+#      description:
     validations:
       required: false
 
