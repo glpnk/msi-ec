@@ -342,6 +342,8 @@ static const char *ALLOWED_FW_4[] __initconst = {
 	"16V4EMS1.114", // GS66 Stealth 11UE / 11UG
 	"16V4EMS1.115",
 	"16V4EMS1.116",
+	"16V5EMS1.107", // Stealth GS66 12UE / 12UGS
+	"16V5EMS1.108",
 	"17K3EMS1.114", // GE76 Raider 11U
 	"17K3EMS1.115", // GP76 Leopard 11UG
 	"17K4EMS1.108", // Raider GE76 12UE
@@ -397,13 +399,13 @@ static struct msi_ec_conf CONF4 __initdata = {
 		.rt_fan_speed_address = 0x89,
 	},
 	.leds = {
-		.micmute_led_address = MSI_EC_ADDR_UNKNOWN,
-		.mute_led_address    = MSI_EC_ADDR_UNKNOWN,
+		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
+		.mute_led_address    = MSI_EC_ADDR_UNSUPP,
 		.bit                 = 1,
 	},
 	.kbd_bl = {
 		.bl_mode_address  = MSI_EC_ADDR_UNSUPP,
-		.bl_modes         = {},
+		.bl_modes         = { },
 		.max_mode         = 1,
 		.bl_state_address = MSI_EC_ADDR_UNSUPP,
 		.state_base_value = 0x80,
@@ -1645,78 +1647,6 @@ static struct msi_ec_conf CONF28 __initdata = {
 		.bl_modes         = { 0x00, 0x08 }, // always on; off after 10 sec
 		.max_mode         = 1,
 		.bl_state_address = MSI_EC_ADDR_UNSUPP, // bugged RGB
-		.state_base_value = 0x80,
-		.max_state        = 3,
-	},
-};
-
-static const char *ALLOWED_FW_29[] __initconst = {
-	"16V5EMS1.107", // Stealth GS66 12UE / 12UGS
-	"16V5EMS1.108",
-	NULL
-};
-
-static struct msi_ec_conf CONF29 __initdata = {
-	.allowed_fw = ALLOWED_FW_29,
-	.charge_control_address = 0xd7,
-	// .usb_share  {
-	// 	.address      = 0xbf,
-	// 	.bit          = 5,
-	// },
-	.webcam = {
-		.address       = 0x2e,
-		.block_address = 0x2f,
-		.bit           = 1,
-	},
-	.fn_win_swap = {
-		.address = 0xe8,
-		.bit     = 4,
-		.invert  = true,
-	},
-	.cooler_boost = {
-		.address = 0x98,
-		.bit     = 7,
-	},
-	.shift_mode = {
-		.address = 0xd2,
-		.modes = {
-			{ SM_ECO_NAME,     0xc2 }, // super battery
-			{ SM_COMFORT_NAME, 0xc1 }, // balanced
-			{ SM_TURBO_NAME,   0xc4 }, // extreme
-			MSI_EC_MODE_NULL
-		},
-	},
-	.super_battery = {
-		.address = 0xeb,
-		.mask    = 0x0f,
-	},
-	.fan_mode = {
-		.address = 0xd4,
-		.modes = {
-			{ FM_AUTO_NAME,     0x0d },
-			{ FM_SILENT_NAME,   0x1d },
-			{ FM_ADVANCED_NAME, 0x8d },
-			MSI_EC_MODE_NULL
-		},
-	},
-	.cpu = {
-		.rt_temp_address      = 0x68,
-		.rt_fan_speed_address = 0x71,
-	},
-	.gpu = {
-		.rt_temp_address      = 0x80,
-		.rt_fan_speed_address = 0x89,
-	},
-	.leds = {
-		.micmute_led_address = MSI_EC_ADDR_UNSUPP,
-		.mute_led_address    = MSI_EC_ADDR_UNSUPP,
-		.bit                 = 1,
-	},
-	.kbd_bl = {
-		.bl_mode_address  = MSI_EC_ADDR_UNSUPP,
-		.bl_modes         = { },
-		.max_mode         = 1,
-		.bl_state_address = MSI_EC_ADDR_UNSUPP,
 		.state_base_value = 0x80,
 		.max_state        = 3,
 	},
@@ -3011,7 +2941,6 @@ static struct msi_ec_conf *CONFIGURATIONS[] __initdata = {
 	&CONF25,
 	&CONF27,
 	&CONF28,
-	&CONF29,
 	&CONF31,
 	&CONF32,
 	&CONF33,
