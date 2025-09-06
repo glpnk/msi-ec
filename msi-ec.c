@@ -1693,6 +1693,8 @@ static struct msi_ec_conf CONF27 __initdata = {
 };
 
 static const char *ALLOWED_FW_28[] __initconst = {
+	"17Q2IMS1.107", // Titan GT77HX 13VH
+	"17Q2IMS1.10D",
 	"1822EMS1.105", // Titan 18 HX A14V
 	"1822EMS1.109", // WMI 2.8
 	"1822EMS1.111",
@@ -1711,7 +1713,7 @@ static struct msi_ec_conf CONF28 __initdata = {
 	// 	.bit          = 5,
 	// }, // Like Katana 17 B11UCX
 	.webcam = {
-		.address       = MSI_EC_ADDR_UNSUPP,
+		.address       = 0x2e,
 		.block_address = MSI_EC_ADDR_UNSUPP,
 		.bit           = 1,
 	},
@@ -1836,75 +1838,6 @@ static struct msi_ec_conf CONF29 __initdata = {
 		.bl_modes         = { },
 		.max_mode         = 1,
 		.bl_state_address = MSI_EC_ADDR_UNSUPP,
-		.state_base_value = 0x80,
-		.max_state        = 3,
-	},
-};
-
-static const char *ALLOWED_FW_30[] __initconst = {
-	"17Q2IMS1.107", // Titan GT77HX 13VH
-	"17Q2IMS1.10D",
-	NULL
-};
-
-static struct msi_ec_conf CONF30 __initdata = {
-	.allowed_fw = ALLOWED_FW_30, // WMI2 based
-	.charge_control_address = 0xd7,
-	.webcam = {
-		.address       = 0x2e,
-		.block_address = MSI_EC_ADDR_UNSUPP,
-		.bit           = 1,
-	},
-	.fn_win_swap = {
-		.address = 0xe8,
-		.bit     = 4,
-		.invert  = false,
-	},
-	.cooler_boost = {
-		.address = 0x98,
-		.bit     = 7,
-	},
-	.shift_mode = {
-		.address = 0xd2,
-		.modes = {
-			{ SM_ECO_NAME,     0xc2 }, // eco works as expected (much slower, uses less power and lower fan speeds)
-			{ SM_COMFORT_NAME, 0xc1 }, // comfort, sport, and turbo all seem to be the same
-			{ SM_SPORT_NAME,   0xc0 },
-			{ SM_TURBO_NAME,   0xc4 },
-			MSI_EC_MODE_NULL
-		},
-	},
-	.super_battery = {
-		.address = MSI_EC_ADDR_UNSUPP,
-		.mask    = 0x0f,
-	},
-	.fan_mode = {
-		.address = 0xd4,
-		.modes = {
-			{ FM_AUTO_NAME,     0x0d },
-			{ FM_SILENT_NAME,   0x1d },
-			{ FM_ADVANCED_NAME, 0x8d },
-			MSI_EC_MODE_NULL
-		},
-	},
-	.cpu = {
-		.rt_temp_address      = 0x68,
-		.rt_fan_speed_address = 0x71,
-	},
-	.gpu = {
-		.rt_temp_address      = 0x80,
-		.rt_fan_speed_address = 0x89,
-	},
-	.leds = {
-		.micmute_led_address = MSI_EC_ADDR_UNKNOWN,
-		.mute_led_address    = MSI_EC_ADDR_UNKNOWN,
-		.bit = 1,
-	},
-	.kbd_bl = {
-		.bl_mode_address  = MSI_EC_ADDR_UNKNOWN,
-		.bl_modes         = {},
-		.max_mode         = 1,
-		.bl_state_address = 0xd3,
 		.state_base_value = 0x80,
 		.max_state        = 3,
 	},
@@ -3417,7 +3350,6 @@ static struct msi_ec_conf *CONFIGURATIONS[] __initdata = {
 	&CONF27,
 	&CONF28,
 	&CONF29,
-	&CONF30,
 	&CONF31,
 	&CONF32,
 	&CONF33,
