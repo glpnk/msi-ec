@@ -697,9 +697,6 @@ static const char *ALLOWED_FW_9[] __initconst = {
 	"14JKEMS1.600",
 	"1551EMS1.106", // Modern 15 A10M
 	"1551EMS1.107",
-	"14DKEMS1.104", // Modern 14 B4MW
-	"14DKEMS1.105",
-	"14DLEMS1.105", // Modern 14 B5M
 	NULL
 };
 
@@ -1187,6 +1184,9 @@ static const char *ALLOWED_FW_16[] __initconst = {
 	"155LEMS1.106",
 	"15HKEMS1.102", // Modern 15 B7M
 	"15HKEMS1.104",
+	"14DKEMS1.104", // Modern 14 B4MW
+	"14DKEMS1.105",
+	"14DLEMS1.105", // Modern 14 B5M
 	NULL
 };
 
