@@ -434,6 +434,7 @@ static const char *ALLOWED_FW_G1_5[] __initconst = {
 	"14JKEMS1.104",
 	"14JKEMS1.300", // Modern 14 C7M
 	"14JKEMS1.600",
+	"14JKEMS1.601",
 	"1551EMS1.106", // Modern 15 A10M
 	"1551EMS1.107",
 	NULL
@@ -663,6 +664,7 @@ static struct msi_ec_conf CONF_G1_7 __initdata = {
 
 static const char *ALLOWED_FW_G1_8[] __initconst = {
 	"16WKEMS1.105", // Bravo 15 A4DDR
+	"16S1EMS1.104", // PS63 MODERN 8RD
 	NULL
 };
 
@@ -1123,6 +1125,9 @@ static const char *ALLOWED_FW_G2_1[] __initconst = {
 	"15K1IMS1.111", // Cyborg 15 A13VF
 	"15K1IMS1.112", // Cyborg 15 A13VFK
 	"15K1IMS1.113", // Cyborg 15 A13VF
+	"15P3EMS1.103", // Pulse 16 AI C1VGKG/C1VFKG
+	"15P3EMS1.106",
+	"15P3EMS1.107",
 	"16S6EMS1.111", // Prestige 15 A11SCX
 	"16S6EMS1.114",
 	"16V6EMS1.103", // Stealth 15 A13V
@@ -1138,6 +1143,7 @@ static const char *ALLOWED_FW_G2_1[] __initconst = {
 	"17LNIMS1.10E", // Bravo 17 C7VE
 	"17LNIMS1.505", // Katana A17 AI B8VF
 	"17M1EMS2.113", // Creator 17 B11UE
+	"17T2EMS1.110", // Sword 17 HX B14VGKG
 	NULL
 };
 
@@ -1214,7 +1220,8 @@ static const char *ALLOWED_FW_G2_2[] __initconst = {
 	"16V4EMS1.116",
 	"16V5EMS1.107", // Stealth GS66 12UE / 12UGS
 	"16V5EMS1.108",
-	"17K3EMS1.114", // GE76 Raider 11U
+	"17K3EMS1.112", //  GE76 Raider 11U /11UH
+	"17K3EMS1.114",
 	"17K3EMS1.115", // GP76 Leopard 11UG
 	"17K4EMS1.108", // Raider GE76 12UE
 	"17K4EMS1.112", // Raider GE76 12UGS / Vector GP76 12UH
@@ -1597,11 +1604,15 @@ static const char *ALLOWED_FW_G2_10[] __initconst = {
 	"1562EMS1.117", // Stealth 15M A11SEK
 	"1563EMS1.106", // Stealth 15M A11UEK
 	"1563EMS1.115",
+	"1572EMS1.107", // Creator Z16 A12U
+	"1572EMS1.106",
 	"1587EMS1.102", // Katana 15 HX B14WEK
 	"15F2EMS1.109", // Stealth 16 Studio A13VG
 	"15F4EMS1.105", // Stealth 16 AI Studio A1VFG
+	"15F4EMS1.106",
 	"15FKIMS1.106", // Stealth A16 AI+ A3XVFG / A3XVGG
 	"15FKIMS1.109",
+	"15H2IMS1.105", // Modern 15 B12HW
 	"15K2EMS1.106", // Cyborg 15 AI A1VFK
 	"15M1IMS1.109", // Vector GP68 HX 13V
 	"15M1IMS1.110",
@@ -1613,12 +1624,13 @@ static const char *ALLOWED_FW_G2_10[] __initconst = {
 	"15M2IMS1.110", // Raider GE68HX 13V(F/G)
 	"15M2IMS1.112", // Vector GP68HX 13VF
 	"15M2IMS1.113",
-	"15M3EMS1.105", // Vector 16 HX AI A2XWHG
+	"15M3EMS1.105", // Vector 16 HX AI A2XWHG / A2XWIG
 	"15M3EMS1.106",
 	"15M3EMS1.107",
 	"15M3EMS1.109",
 	"15M3EMS1.110",
 	"15M3EMS1.112",
+	"15M3EMS1.113",
 	"15P2EMS1.108", // Sword 16 HX B13V / B14V
 	"15P2EMS1.110",
 	"17L5EMS1.111", // Pulse/Katana 17 B13V/GK
@@ -1645,7 +1657,7 @@ static const char *ALLOWED_FW_G2_10[] __initconst = {
 	"1822EMS1.115",
 	"1824EMS1.107", // Titan 18 HX Dragon Edition
 	"182LIMS1.108", // Vector A18 HX A9WHG
-	"182LIMS1.111", // New ec version for Vector A18 HX A9WHG
+	"182LIMS1.111",
 	NULL
 };
 
