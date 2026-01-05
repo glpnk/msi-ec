@@ -801,6 +801,7 @@ static struct msi_ec_conf CONF_G1_9 __initdata = {
 };
 
 static const char *ALLOWED_FW_G1_10[] __initconst = {
+	"16P5EMS1.103", // GE63 Raider 8RE
 	"1782EMS1.109", // GT72 6QE Dominator Pro
 	NULL
 };
@@ -1316,6 +1317,7 @@ static const char *ALLOWED_FW_G2_3[] __initconst = {
 	"14J1IMS1.215",
 	"14N1EMS1.104", // Prestige 14 AI Evo C1MG
 	"14N1EMS1.307", // Prestige 14 AI Evo C2HMG
+	"14QKIMS1.108", // Venture A14 AI+ A3HMG
 	NULL
 };
 
@@ -1368,7 +1370,7 @@ static struct msi_ec_conf CONF_G2_3 __initdata = {
 	},
 	.leds = {
 		.micmute_led_address = 0x2c, // not present on `14F1`
-		.mute_led_address    = 0x2d, // not present on `14L1`, `14N1`
+		.mute_led_address    = 0x2d, // not present on `14L1`, `14N1`, `14QK`
 		.bit                 = 1,
 	},
 	.kbd_bl = {
@@ -1384,6 +1386,7 @@ static struct msi_ec_conf CONF_G2_3 __initdata = {
 static const char *ALLOWED_FW_G2_4[] __initconst = {
 	"14N2EMS1.102", // Prestige 14 AI Studio C1UDXG
 	"14N2EMS1.103",
+	"14P1IMS1.106", // Cyborg 14 A13VF
 	NULL
 };
 
