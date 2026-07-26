@@ -2827,7 +2827,7 @@ static int __init load_configuration(void)
 	if (!banned)
 		pr_err("Your firmware version is not supported!\n");
 	else
-		pr_err("Your firmware version is blacklisted !\n")
+		pr_err("Your firmware version is blacklisted !\n");
 	return -EOPNOTSUPP;
 }
 
