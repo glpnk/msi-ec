@@ -2925,7 +2925,7 @@ MODULE_AUTHOR("Jose Angel Pastrana <japp0005@red.ujaen.es>");
 MODULE_AUTHOR("Aakash Singh <mail@singhaakash.dev>");
 MODULE_AUTHOR("Nikita Kravets <teackot@gmail.com>");
 MODULE_AUTHOR("Xabi Goity <xabigoity@gmail.com>");
-MODULE_AUTHOR("Glitch Punk")
+MODULE_AUTHOR("Glitch Punk");
 MODULE_DESCRIPTION("MSI Embedded Controller");
 MODULE_VERSION("0.13");
 
