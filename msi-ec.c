@@ -1059,7 +1059,7 @@ static struct msi_ec_conf CONF_G2_0 __initdata = {
 };
 
 static const char *ALLOWED_FW_G2_1[] __initconst = {
-	"14C4EMS1.1", // Prestige 14 A11SCX
+	"14C4EMS1.1", // Prestige 14 A11SCX / A11SCS
 	"14C6EMS1.1", // Prestige 14 Evo A12M
 	"1581EMS1.1", // Katana GF66 11UE / 11UG
 	"1582EMS1.1", // Pulse GL66 11UDK / Katana GF66 11UC / 11UD
@@ -1529,7 +1529,7 @@ static const char *ALLOWED_FW_G2_10[] __initconst = {
 	"1563EMS1.1", // Stealth 15M A11UEK
 	"1571EMS1.1", // Creator Z16 A11UE
 	"1572EMS1.1", // Creator Z16 A12U
-	"1587EMS1.1", // Katana 15 HX B14WEK
+	"1587EMS1.1", // Katana 15 HX B14WEK / B14WGK
 	"158NIMS1.5", // Katana A15 AI B8V
 	"15B1EMS1.1", // Stealth 15M B12UE
 	"15F2EMS1.1", // Stealth 16 Studio A13VG
